@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Epigen</title>
+	<meta name="description" content="epigen framework">
+	<meta name="keywords" content="epigen, framework, typescript">
+	<script type="text/javascript" src="../js/client.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<span id="lang"><a href="../fr/index.html">Français</a></span>
+		<div id="logo"><img src="logo.png" alt="epigen" /></div>
+		<form id="login_form" onsubmit="XSubmitLogin(this); return false;">
+			<input type="text" id="input_login" name="name" placeholder="Username" required="">
+			<input type="password" id="input_password" name="password" placeholder="Password" required="">
+			<button id="button_login">Log in</button>
+			<p id="error_display">An error has occured.</p>
+        </form>
+        <div id="success_display">
+			<p>Welcome, <span id="user_name"></span>.
+				<a href="administration.html">Administration</a>
+				<a href="disconnect.html">Disconnect</a>
+			</p>
+		</div>
+	</header>
+	<article>
+		<section class="locutor">
+			<h1>Hello !</h1>
+			<p>Welcome to epigen, the Web framework written in Typescript.</p>
+		</section>
+		<section class="interlocutor">
+			<p>I'd like to <a href="info.html">learn more</a></p>
+            <br/>
+			<p>I wish to <a href="signin.html">sign in</a></p>
+		</section>
+	</article>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Epigen</title>
+	<meta name="description" content="epigen">
+	<meta name="keywords" content="epigen, framework, typescript">
+	<script type="text/javascript" src="../js/client.js" defer></script>
+	<script type="text/javascript" defer>
+		window.addEventListener("load", function () {
+			console.log('load > XConfigureRegistration');
+			xConfigureRegistration();
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="logo.png" alt="epigen" /></div>
+	</header>
+	<article>
+		<section class="locutor">
+			<p>&lt;&lt; <a href="/" class="go2root">Accueil</a></p>
+			<h1>Inscription</h1>
+			<p>Les inscriptions requièrent un code d'invitation.</p>
+			<br>
+		</section>
+		<section class="interlocutor">
+			<div id="unallowed_display">Les inscriptions sont momentanément fermées, veuillez nous excuser pour le désagrément.</div>
+			<div id="error_display">Une erreur s'est produite, veuillez réessayer plus tard ou contacter le support.</div>
+			<div id="success_display">Votre compte été créé, merci de votre inscription <span id="user_name"></span>. <a href="index.html">Se connecter</a></div>
+			<div id="registration_panel">
+				<form id="registration_form" action="" class="signin-form" onsubmit="XSubmitRegistration(this); return false;">
+					<input type="text" id="input_invitation_code" placeholder="Code d'invitation">
+					<input type="text" id="input_name" placeholder="Pseudonyme" required="">
+					<input type="email" id="input_mail" placeholder="Adresse courriel" required="">
+					<div id="password_panel">
+						<input type="password" id="input_password" placeholder="Mot de passe" required="">
+						<p id="password_strength_meter" class="indication">Le mot de passe doit contenir au minimum six caractères dont au moins un nombre, une minuscule et une majuscule.</p>
+					</div>
+					<input type="text" id="input_date" placeholder="Date de naissance" required="">
+					<p class="indication">Date de naissance, requise pour toute demande de récupération de l'identifiant et/ou du mot de passe.</p>
+					<div id="captcha">
+						<div id="divcaptcha" class="g-recaptcha"></div>
+					</div>
+					<button id="signin_button">Inscription</button>
+				</form>
+				<div>
+					<!--	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script> -->
+		</section>
+		<section class="locutor">
+			<p>&lt;&lt; <a href="/" class="go2root">Accueil</a></p>
+		</section>
+	</article>
+</body>
+
+</html>

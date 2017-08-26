@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+*.txt
+
+# sourcemap
+*.map
+
+# Dependency directories
+node_modules
+
+# EDI
+.vscode
+
+# configuration
+configuration.json
+
+# build
+build
+frontend/js/client.js
+frontend/js/shared.gen.ts
+tmp

@@ -1,9 +1,9 @@
 # epigen
-"Epigenetics" : Typescript micro package manager and framework for the yenah project
 
-Epigenetics is part of the yenah project. If one can see the Typescript source code of yenah as it's "DNA", epigen selects dynamically modules of code fraction base on signature.
+"Epigenetics" : Web framework written in Typescript as a shared foundation for projects yenah, sulcus, bci.ts and hopefully more.
 
-Epigen : Typescript "package manager" that works by signature (and not by version) to allow the dynamic loading of code parts
-Operator, the "body" (perception, action) of yenah : Common libraries, Web and Websocket server, Persistor management, Cloud API access
+![epigen](https://github.com/Gwym/epigen/blob/master/frontend/en/logo.png)
 
-Used in : yenah (world simulation engine : rigid body and fluid simulator) and sulcus ("mind" library for systemic simulation, neural networks, genetic algorithms...)
+Contains (partly) : logging, configuration, common libraries, Web and Websocket server, static file server,  persistor management (MongoDB), User sign in, registration and sessions, States-Events-Actions Machines, simple shared server/frontend ressources sharing.
+
+To come : Event-driven testing framework, G+/FB users, Cloud API access, Typescript "module manager" that works by signature (and not by versions) to allow the dynamic loading and mixing of code parts with compatible interfaces.

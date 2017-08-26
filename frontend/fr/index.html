@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Epigen</title>
+	<meta name="description" content="epigen">
+	<meta name="keywords" content="epigen, framework, typescript">
+	<script type="text/javascript" src="../js/client.js" defer></script>
+	<script type="text/javascript" defer>
+		window.addEventListener("load", function () {
+			console.log('load > XCheckSession');
+			XCheckSession(document.getElementById('login_form'));
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<span id="lang"><a href="../en/index.html">English</a></span>
+		<div id="logo"><img src="logo.png" alt="epigen" /></div>
+		<form id="login_form" onsubmit="XSubmitLogin(this); return false;">
+			<input type="text" id="input_login" name="name" placeholder="Identifiant" required="">
+			<input type="password" id="input_password" name="password" placeholder="Mot de passe" required="">
+			<button id="button_login">Connexion</button>
+			<p id="error_display">Une erreur s'est produite.</p>
+		</form>
+		<div id="success_display">
+			<p>Bienvenue, <span id="user_name"></span>.
+				<a href="administration.html">Administrer</a>
+				<a href="quitter.html">Déconnexion</a>
+			</p>
+		</div>
+	</header>
+	<article>
+		<section class="locutor">
+			<h1>Bonjour !</h1>
+			<p>Bienvenue sur epigen, le framework Web en Typescript.</p>
+        </section>
+        <section class="interlocutor">
+			<p>J'aimerai <a href="info.html">en apprendre plus</a>.</p>
+			<br/>
+			<p>Je souhaite <a href="inscription.html">créer un compte</a>.</p>
+		</section>
+	</article>
+</body>
+
+</html>

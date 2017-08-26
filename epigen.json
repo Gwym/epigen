@@ -1,0 +1,5 @@
+{
+    "shared": [
+        "src/services/shared/messaging.ts"
+    ]
+}

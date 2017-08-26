@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Epigen</title>
+	<meta name="description" content="epigen">
+	<meta name="keywords" content="epigen, framework, typescript">
+	<script type="text/javascript" src="../js/client.js" defer></script>
+	<script type="text/javascript" defer>
+	window.addEventListener("load", function () {
+		console.log('load > XCloseSession');
+		XCloseSession();
+	});
+	</script>
+</head>
+<body>
+	<header>
+		<div id="logo"><img src="logo.png" alt="yenah" /></div>
+	</header>
+	<article>
+		<section class="locutor">
+			<h1>Au revoir !</h1>
+			<div id="success_display"><p>Déconnexion effectuée <span id="user_name"></span>, merci de votre visite.</p></div>
+			<p id="error_display">Une erreur s'est produite lors de la déconnexion.</p>
+			<p></p>
+			<h2>Que souhaitez-vous faire maintenant ?</h2>
+			<p><a href="index.html">Retourner à l'accueil</a></p>
+			<p></p>
+		</section>
+	</article>
+</body>
+
+</html>

@@ -11,9 +11,9 @@ export interface SesamEvent {
 }
 
 export interface EventsTable {
-    entry?: (arg?: SesamEvent) => States | undefined
-    [index: number]: undefined | ((arg?: SesamEvent) => States | undefined)
-    exit?: (arg?: SesamEvent) => States | undefined
+    entry?: (arg?: SesamEvent) => States | void
+    [index: number]: undefined | ((arg?: SesamEvent) => States | void)
+    exit?: (arg?: SesamEvent) => States | void
 }
 
 export interface StatesTable {
@@ -83,7 +83,7 @@ export abstract class Sesam implements MachineInterface {
 
     // TODO (0) constructor() { initstate.entry() }
 
-    event(event: SesamEvent, hasPriority = false) {
+    event(event: SesamEvent, hasPriority = false): void {
 
         if (hasPriority) {
             this.eventQueue.unshift(event);
@@ -107,7 +107,7 @@ export abstract class Sesam implements MachineInterface {
                 dbg.error({ error: 'Unkonwn Event', event: e, state: this._state });
             } else {
                 let newState = happeningActionId(e);
-                if (newState !== undefined) {
+                if (typeof newState === 'number') { // FIXME : (5) if (newState !== undefined && newState !== void) {
                     this.transition(newState, e);
                 }
             }

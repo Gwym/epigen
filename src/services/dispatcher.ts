@@ -274,7 +274,7 @@ export abstract class Dispatcher implements UserSessionSyncManager, DispatcherIn
     dbg.log(Date() + ': Node server started on ' + config.httpIpAddress + ':' + config.httpPort);
 
     // FIXE (1) : without cast, error Type 'Server' is not assignable to type 'Server'. Property 'maxHeadersCount' is missing in type 'Server'.
-    let wsOptions: wslib.IServerOptions = { server: <http.Server>server, clientTracking: false };
+    let wsOptions: wslib.ServerOptions = { server: <http.Server>server, clientTracking: false };
 
     let WebSocketServer = wslib.Server;
 

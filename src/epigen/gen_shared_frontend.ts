@@ -21,6 +21,7 @@ console.log('Reading epigen configuration from ' + epigenConfigFile + '...')
 try {
     let configString = fs.readFileSync(epigenConfigFile).toString()
     let config = <EpigenConfigurationInterface>JSON.parse(configString)
+    // TODO (1) : remove JSON comments as in vscode json config files ?
     console.log(config.shared);
     if (! config.shared || (!(config.shared instanceof Array))) {
         console.error(configString);

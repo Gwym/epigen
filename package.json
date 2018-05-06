@@ -23,12 +23,12 @@
   "homepage": "https://github.com/Gwym/epigen#readme",
   "dependencies": {
     "@types/bcrypt": "^1.0.0",
-    "@types/mongodb": "^2.2.15",
-    "@types/node": "^8.0.47",
-    "@types/ws": "^3.2.0",
+    "@types/mongodb": "^2.2.20",
+    "@types/node": "^8.10.12",
+    "@types/ws": "^3.2.1",
     "bcrypt": "^1.0.3",
-    "mongodb": "^2.2.31",
+    "mongodb": "^2.2.35",
     "source-map-support": "^0.4.16",
-    "ws": "^3.1.0"
+    "ws": "^3.3.3"
   }
 }

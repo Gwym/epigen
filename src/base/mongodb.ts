@@ -1,3 +1,5 @@
+// configuration
+// https://docs.mongodb.com/manual/tutorial/enable-authentication/
 
 import * as Mongo from 'mongodb';
 import * as bcrypt from 'bcrypt';
@@ -27,7 +29,7 @@ export class BaseMongoPersistor extends AsyncPersistor {
    
     connect(mongoUrl: string): Promise<BaseMongoPersistor> {
 
-        return new Promise<BaseMongoPersistor>((resolve, reject) => {
+        return new Promise<BaseMongoPersistor>((resolve, _reject) => {
 
             Mongo.MongoClient.connect(mongoUrl).then((mdb) => {
 
@@ -58,7 +60,7 @@ export class BaseMongoPersistor extends AsyncPersistor {
 
             }).catch(function (err) {
                 dbg.error('Error connecting to Mongo. Message:\n' + err);
-                reject(err);
+                // reject(err);
                 throw (err); // Promises used in callbacks does not catch
             })
         })
